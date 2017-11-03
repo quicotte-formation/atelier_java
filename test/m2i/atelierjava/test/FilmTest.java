@@ -5,6 +5,7 @@
  */
 package m2i.atelierjava.test;
 
+import java.util.Date;
 import m2i.atelierjava.entite.Film;
 import org.junit.Test;
 
@@ -20,8 +21,9 @@ public class FilmTest {
     public void nouveauFilm(){
         
         Film f1 = new Film();
-        f1.setTitre( "dracula" );
-        f1.setAnneeDeProduction(2001);
+        Date date = new Date();
+        f1.initialise("Dracula", "blabla", 2001, date);
+        f1.affiche();
         
         Film f2 = new Film();
         f2.setTitre(  "kung fu panda" );
@@ -29,5 +31,7 @@ public class FilmTest {
         
         System.out.println( f1.getTitre() );
         System.out.println( f2.getTitre() );
+        
+        Date d = new Date();
     }
 }

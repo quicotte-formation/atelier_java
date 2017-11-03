@@ -18,6 +18,36 @@ public class Film {
     private int anneeDeProduction;
     private Date dateCreation;
 
+    public void affiche(){
+        
+        System.out.println( String.format("Film: titre=%s synopsis=%s %d %s", this.titre, this.synopsis, this.anneeDeProduction, this.dateCreation) );
+        // Equivalent de "Film: " + this.titre + " " + this.synopsis ...
+    }
+    
+    public void initialise(String titre, String synop, int annee, Date dateCrea){
+        
+        this.titre = titre;
+        this.synopsis = synop;
+        this.anneeDeProduction = annee;
+        this.dateCreation = dateCrea;
+    }
+    
+    public String getSynopsis() {
+        return synopsis;
+    }
+
+    public void setSynopsis(String synopsis) {
+        this.synopsis = synopsis;
+    }
+
+    public Date getDateCreation() {
+        return dateCreation;
+    }
+
+    public void setDateCreation(Date dateCreation) {
+        this.dateCreation = dateCreation;
+    }
+
     public String getTitre() {
         return titre;
     }
