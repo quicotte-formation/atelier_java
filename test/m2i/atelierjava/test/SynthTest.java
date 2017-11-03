@@ -20,7 +20,7 @@ import org.junit.Test;
 public class SynthTest {
     
     @Test
-    public void testJouerNoteOK(){
+    public void testJouerNoteOK(){ 
         
         Synthetiseur synth = new Synthetiseur();
         
