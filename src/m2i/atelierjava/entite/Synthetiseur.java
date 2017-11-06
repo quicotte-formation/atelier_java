@@ -11,7 +11,7 @@ package m2i.atelierjava.entite;
  */
 public class Synthetiseur {
 
-    protected boolean on;
+    protected boolean on=true;
     protected String instrument;
     protected int volume;
 

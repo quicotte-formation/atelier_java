@@ -11,6 +11,7 @@ import javax.sound.midi.MidiSystem;
 import javax.sound.midi.MidiUnavailableException;
 import javax.sound.midi.Synthesizer;
 import m2i.atelierjava.entite.Synthetiseur;
+import org.junit.Assert;
 import org.junit.Test;
 
 /**
@@ -28,36 +29,30 @@ public class SynthTest {
         synth.jouerNote("FA#3");
     }
     
-//    @Test
+    @Test
     public void testVolumnePlusOK(){
         
         Synthetiseur v = new Synthetiseur();
-        System.out.println( v.getVolume() );
+        v.allumageOnOff();
         v.volumePlus();
         v.volumePlus();
         v.volumePlus();
         v.volumePlus();
         v.volumePlus();
         v.volumePlus();
-        v.volumePlus();
-        v.volumePlus();
-        v.volumePlus();
-        v.volumePlus();
-        v.volumePlus();
-        v.volumePlus();
-        
-        System.out.println( v.getVolume() );
+        Assert.assertEquals(10, v.getVolume());
     }
     
-//    @Test
+    @Test
     public void testAllumerOnOffOK(){
         
         Synthetiseur s = new Synthetiseur();
-        System.out.println( s.isOn() );
+        Assert.assertFalse(s.isOn());
+//        Assert.assertFalse( s.isOn() );
         s.allumageOnOff();
-        System.out.println( s.isOn() );
+//        Assert.assertTrue( s.isOn() );
         s.allumageOnOff();
-        System.out.println( s.isOn() );
+//        Assert.assertFalse( s.isOn() );
     }
     
 //    @Test
