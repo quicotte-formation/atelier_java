@@ -6,9 +6,10 @@
 package m2i.atelierjava.test;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 import junit.framework.Assert;
-import m2i.atelierjava.entite.Film;
 import org.junit.Test;
 
 /**
@@ -16,6 +17,16 @@ import org.junit.Test;
  * @author Administrateur
  */
 public class CollectionTest {
+    
+    @Test
+    public void testSet(){
+        
+        Set<String> capitales = new HashSet<>();
+        
+        capitales.add("Paris");
+        capitales.add("Washington");
+        capitales.add("Kingston");
+    }
     
     @Test
     public void testSommeListFranceBelgiquePlusListeEspItTotal4OK(){
@@ -31,6 +42,7 @@ public class CollectionTest {
         List<String> listeTotale = new ArrayList<>();
         listeTotale.addAll(listeFrBe);
         listeTotale.addAll(listeEspIt);
+        
         
         int nbElem = listeTotale.size();
         Assert.assertEquals(4, nbElem);
